@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyPortfolio</title>
+  <meta charset="UTF-8">
+  <title>Scott Christensen | Code by Scott</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+    <header id="main_navigation" class="clearfix">
+      <a href="#" class="name">Scott Christensen</a>
+      <nav>
+        <%= link_to "Articles", posts_path %>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+  </header>
+  
+  <%= yield %>
 
 </body>
 </html>
