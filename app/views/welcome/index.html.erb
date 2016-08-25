@@ -1,0 +1,27 @@
+<div class="wrapper wrapper_padding clearfix">
+    <div class="col-1 about homepage_content">
+      <h2>About</h2>
+      <hr>
+      <p>I’m a designer &amp; developer currently living in Sasebo, Japan.</p>
+      <p>As a full-time Dad to an energetic toddler, I spend my days balancing my fatherly duties and building applications.</p>
+      <p>I micro blog on <a href="www.twitter.com/jiujitsuscott">Twitter</a>, post videos on <a href="www.youtube.com/jiujitsuscott">YouTube</a>, and share my work on <a href="www.github.com/codebyscott">GitHub</a>.</p>
+    </div>
+    <div class="col-2 homepage_content">
+      <h2>Things I've Written</h2>
+      <hr>
+      <% @posts.each do |post| %>
+        <h3><a href=""><%= link_to post.title, post %></a></h3>
+        <p class="date"><%= post.created_at.strftime('%A, %b %d')%></p>
+      <% end %>
+    </div>
+    <div class="col-3 homepage_content">
+      <h2>Things I've Built</h2>
+      <hr>
+      <h3><a href="">Unicasts</a></h3>
+      <p class="date">August 16, 2016</p>
+      <h3><a href="">The Mackenzie Child Community</a></h3>
+      <p class="date">June 20, 2016</p>
+      <h3><a href="">12 in 12 Challenge</a></h3>
+      <p class="date">May 07, 2016</p>
+    </div>
+  </div>
